@@ -1,19 +1,30 @@
 <?php
-require_once "libs/app.php";
-require_once "libs/controller.php";
-require_once "models/model.php";
-require_once "libs/view.php";
-require_once 'libs/database.php';
-require_once "libs/registromodel.php";
-require_once "libs/db_config.php";
-require_once "libs/crud_clientes.php";
-$app = new App();
+require_once 'controllers/ClienteController.php';
+require_once 'controllers/UsuarioController.php';
 
-//NAVEGACION AMIGABLE
-//localhost/index.php?id=15&name=franco
-//localhost/categoriasprodcutos.php 
-//VER CATEGORIAS
-//localhost/categorias/
-//REGISTRAR CATEGORIAS
-//localhost/categorias/registro
-?>
+// Verificar qué acción se solicita
+$action = $_GET['action'] ?? 'registroCliente'; // La acción predeterminada es "registroCliente"
+
+// Crear instancias de los controladores
+$clienteController = new ClienteController();
+$usuarioController = new UsuarioController();
+
+// Enrutamiento basado en la acción solicitada
+switch ($action) {
+    case 'registroCliente':
+        $clienteController->registroCliente();
+        break;
+    case 'registroUsuario':
+        $usuarioController->registroUsuario();
+        break;
+    case 'login':
+        $usuarioController->login();
+        break;
+    case 'logout':
+        $usuarioController->logout();
+        break;
+    default:
+        // Acción inválida, redirigir a la página de inicio
+        header('Location: index.php?action=registroCliente');
+        break;
+}

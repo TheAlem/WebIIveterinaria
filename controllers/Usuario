@@ -1,0 +1,64 @@
+<?php
+require_once 'models/UsuarioModel.php';
+
+class UsuarioController {
+    private $usuarioModel;
+
+    public function __construct() {
+        $this->usuarioModel = new UsuarioModel();
+    }
+
+    public function registroUsuario() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Obtener datos del formulario de registro de usuario
+            $nombreUsuario = $_POST['nombre_usuario'];
+            $contraseña = $_POST['contraseña'];
+            $correo = $_POST['correo'];
+            $rol = $_POST['rol'];
+
+            // Validar los datos (puedes implementar validaciones adicionales aquí)
+
+            // Registrar el usuario
+            $result = $this->usuarioModel->registrarUsuario($nombreUsuario, $contraseña, $correo, $rol);
+
+            // Redirigir según el resultado
+            if ($result) {
+                echo "Usuario registrado con éxito.";
+            } else {
+                echo "Error al registrar usuario.";
+            }
+        } else {
+            // Mostrar el formulario de registro de usuario
+            require_once 'views/registroUsuario.php';
+        }
+    }
+
+    public function login() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Obtener datos del formulario de inicio de sesión
+            $nombreUsuario = $_POST['nombre_usuario'];
+            $contraseña = $_POST['contraseña'];
+
+            // Iniciar sesión
+            $result = $this->usuarioModel->login($nombreUsuario, $contraseña);
+
+            // Redirigir según el resultado
+            if ($result) {
+                echo "Inicio de sesión exitoso.";
+            } else {
+                echo "Nombre de usuario o contraseña incorrectos.";
+            }
+        } else {
+            // Mostrar el formulario de inicio de sesión
+            require_once 'views/login.php';
+        }
+    }
+
+    public function logout() {
+        // Cerrar sesión
+        $this->usuarioModel->logout();
+
+        // Redirigir a la página de inicio
+        header('Location: index.php');
+    }
+}

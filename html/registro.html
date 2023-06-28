@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Registro de Usuario</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/styleloginregistro.css">
 </head>
-
 <body>
     <div class="container">
         <h1>Registro de Usuario</h1>
-        <form action="../libs/registromodel" method="post">
+        <form action="../php/registro.php" method="post">
             <label for="nombre_usuario">Nombre de Usuario:</label><br>
             <input type="text" id="nombre_usuario" name="nombre_usuario" required><br>
             <label for="correo">Correo Electrónico:</label><br>
@@ -23,9 +21,8 @@
                 <option value="1">Administrador</option>
             </select><br>
             <input type="submit" value="Registrar">
-            <p>¿Ya tienes una cuenta? <a href="login">Inicia sesión aquí</a>.</p>
-        </form> 
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a>.</p>
+        </form>
     </div>
 </body>
-
 </html>
