@@ -28,6 +28,9 @@ class RegistroModel
 
     if ($stmt->execute()) {
       // Registro exitoso
+      header("Location: ../controllers/login.php"); // redirige a la página de inicio de sesión después del registro exitoso
+      exit();
+
     } else {
       echo "Error al registrar usuario: " . $this->conn->error;
     }
