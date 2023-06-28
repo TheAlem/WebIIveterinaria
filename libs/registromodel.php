@@ -28,7 +28,7 @@ class RegistroModel
 
     if ($stmt->execute()) {
       // Registro exitoso
-      header("Location: ../controllers/login.php"); // redirige a la página de inicio de sesión después del registro exitoso
+      header("Location: /login"); // redirige a la página de inicio de sesión después del registro exitoso
       exit();
 
     } else {

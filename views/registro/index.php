@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Registro de Usuario</h1>
-        <form action="../libs/registromodel.php" method="post">
+        <form action="../libs/registromodel" method="post">
             <label for="nombre_usuario">Nombre de Usuario:</label><br>
             <input type="text" id="nombre_usuario" name="nombre_usuario" required><br>
             <label for="correo">Correo Electrónico:</label><br>
