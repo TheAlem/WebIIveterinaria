@@ -2,6 +2,9 @@
 
 class Model
 {
+
+  protected $model;
+  
   function __construct()
   {
     //nuestro objeto de conexion a la DB
