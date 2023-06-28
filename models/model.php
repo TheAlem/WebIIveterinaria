@@ -3,8 +3,9 @@
 class Model
 {
 
-  protected $model;
-  
+  public $db;
+  public $model;
+
   function __construct()
   {
     //nuestro objeto de conexion a la DB
