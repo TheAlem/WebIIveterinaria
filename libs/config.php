@@ -1,10 +1,10 @@
 <?php 
-define('URL', 'http://localhost/proyectoveterinario/');
+define('URL', 'http://localhost/WebIIveterinaria/');
 
 //Datos base de datos
 define('HOST', 'localhost');
-define('DB', 'mvc');
-define('USER', 'root');
-define('PASSWORD', 'mysql');
+define('DB', 'veterinario_web');
+define('USER', 'phpmyadmin');
+define('PASSWORD', 'admin');
 define('CHARSET', 'utf8mb4');
 ?>

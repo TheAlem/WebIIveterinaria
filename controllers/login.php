@@ -1,7 +1,7 @@
 <?php
 class Login extends Controller
 {
-    private $registroModel;
+    protected $registroModel;
 
     function __construct($db)
     {
@@ -10,10 +10,6 @@ class Login extends Controller
         $this->view->render("login/index");
     }
 
-    function saludo()
-    {
-        echo "<p>Llamaste al metodo saludo</p>";
-    }
 
     function registro()
     {
