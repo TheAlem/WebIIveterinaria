@@ -24,8 +24,9 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $nombre_usuario, $contraseña_hash, $correo, $rol);
 
 if ($stmt->execute()) {
-  header("Location: login"); // redirige a la página de inicio de sesión después del registro exitoso
+  header("Location: ../controllers/login.php"); // redirige a la página de inicio de sesión después del registro exitoso
   exit();
+
 } else {
   echo "Error al registrar usuario: " . $conn->error;
 }
