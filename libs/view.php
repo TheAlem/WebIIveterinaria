@@ -9,7 +9,7 @@ class View
     //funcion que llama a la vista respectiva
     function render($nombre)
     { //   main/index
-        $ruta = "views/" . $nombre . ".html";
+        $ruta = "views/" . $nombre . ".php";
         //views/usuario/index
         require $ruta;
     }
