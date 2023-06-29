@@ -38,6 +38,30 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../css/stylecrudmascota.css">
 </head>
+<style>
+    /* Estilos para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Color de fondo personalizado */
+    color: #fff; /* Color de texto personalizado */
+    border: none;
+    border-radius: 5px; /* Radio de borde personalizado */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049; /* Cambio de color al pasar el cursor */
+}
+
+.button.secondary {
+  background-color: #f44336; /* Color de fondo personalizado para botón secundario */
+}
+
+.button.secondary:hover {
+  background-color: #d32f2f; /* Cambio de color al pasar el cursor para botón secundario */
+}
+</style>
 
 <body class="productoc">
     <div class="page-wrapper">
@@ -218,7 +242,7 @@
                                         <input type="hidden" name="action" value="get_owner">
                                         <label for="id_cliente_dueno">ID del Cliente:</label><br>
                                         <input type="text" id="id_cliente_dueno" name="id_cliente_dueno"><br>
-                                        <input type="submit" value="Mostrar Datos del Dueño">
+                                        <input type="submit" class="button"  value="Mostrar Datos del Dueño">
                                     </form>
 
                                     <h3>Registro de mascota</h3>
@@ -240,7 +264,7 @@
                                         <input type="text" id="color" name="color"><br>
                                         <label for="historial_medico">Historial Médico:</label><br>
                                         <textarea id="historial_medico" name="historial_medico"></textarea><br>
-                                        <input type="submit" value="Registrar">
+                                        <input type="submit" class="button"  value="Registrar">
                                     </form>
 
                                     <h3>Lista de Mascotas</h3>
@@ -292,13 +316,13 @@
                                                                 value="<?php echo $mascota["Color"]; ?>">
                                                             <textarea
                                                                 name="historial_medico"><?php echo $mascota["Historial_Medico"]; ?></textarea>
-                                                            <input type="submit" value="Actualizar">
+                                                            <input type="submit" class="button"  value="Actualizar">
                                                         </form>
                                                         <form action="../php/crud_mascota.php" method="post">
                                                             <input type="hidden" name="action" value="delete">
                                                             <input type="hidden" name="id_mascota"
                                                                 value="<?php echo $mascota["ID_Mascota"]; ?>">
-                                                            <input type="submit" value="Eliminar">
+                                                            <input type="submit" class="button secondary" value="Eliminar">
                                                         </form>
                                                     </td>
                                                 </tr>
