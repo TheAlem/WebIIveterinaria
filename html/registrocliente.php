@@ -340,23 +340,13 @@ if ($_SESSION['rol'] != 'Administrador') {
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
                 
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>">
-                
-                                <label for="apellido">Apellido:</label>
-                                <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>">
-                
-                                <label for="direccion">Dirección:</label>
-                                <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>">
-                
-                                <label for="ciudad">Ciudad:</label>
-                                <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>">
-                
-                                <label for="telefono">Teléfono:</label>
-                                <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>">
-                
-                                <label for="correo">Correo Electrónico:</label>
-                                <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>">
+                                <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>" placeholder="Nombre">
+                                <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>" placeholder="Apellido">
+                                <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>" placeholder="Dirección">
+                                <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>" placeholder="Ciudad">
+                                <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>" placeholder="Teléfono">
+                                <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>"
+                                    placeholder="Correo Electrónico">
                 
                                 <input type="submit" value="Actualizar" style="background-color: blue;">
                             </form>
