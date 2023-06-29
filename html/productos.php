@@ -35,6 +35,47 @@
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
 
+    <style>
+    .formulario-producto {
+        width: 80%;
+        margin: auto;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    .formulario-producto label {
+        display: block;
+        margin: 10px 0px 5px 0px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .formulario-producto input[type="text"], .formulario-producto input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .formulario-producto input[type="submit"] {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario-producto input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 </head>
 <body  class="productoc">
     <div class="page-wrapper">
@@ -205,7 +246,7 @@
                         <div class="col-md-12">
                             <div class="containerp">
                                 <h2>Formulario de Productos</h2>
-                                <form action="../php/crud_productos.php" method="post">
+                                <form class="formulario-producto" action="../php/crud_productos.php" method="post">
                                     <input type="hidden" name="action" value="create">
                                     <label for="nombre">Nombre:</label><br>
                                     <input type="text" id="nombre" name="nombre"><br>
