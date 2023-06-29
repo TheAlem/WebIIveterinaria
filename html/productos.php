@@ -245,7 +245,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="containerp">
-                                <h2>Formulario de Productos</h2>
+                                <center><h2>Formulario de Productos</h2></center>  
                                 <form class="formulario-producto" action="../php/crud_productos.php" method="post">
                                     <input type="hidden" name="action" value="create">
                                     <label for="nombre">Nombre:</label><br>
