@@ -9,6 +9,8 @@
   <meta name="author" content="Hau Nguyen">
   <meta name="keywords" content="au theme template">
 
+  <link rel="icon" href="../images/icon/usuario.png" type="image/x-icon">
+
   <!-- Title Page-->
   <title>Login</title>
 
@@ -33,9 +35,12 @@
   <!-- Main CSS-->
   <link href="../css/theme.css" rel="stylesheet" media="all">
 
+  
+
 </head>
 
 <body class="animsition">
+  <div id="background"></div>
   <div class="page-wrapper">
     <div class="page-content--bge5">
       <div class="container">
@@ -43,18 +48,18 @@
           <div class="login-content">
             <div class="login-logo">
               <a href="#">
-                <img src="../images/icon/logo.png" alt="CoolAdmin">
+                <img src="../images/icon/usuario.png" style="height: 80px; width:80px" alt="Usuario">
               </a>
             </div>
             <div class="login-form">
               <form action="../php/login.php" method="post">
                 <div class="form-group">
-                  <label for="nombre_usuario">Nombre de usuario:</label><br>
+                  <label style="color:  #0a7274;" for="nombre_usuario">Nombre de usuario:</label>
                   <input type="text" id="nombre_usuario" name="nombre_usuario" class="au-input au-input--full"
                     placeholder="Nombre de usuario">
                 </div>
                 <div class="form-group">
-                  <label for="contraseña">Contraseña:</label><br>
+                  <label style="color:  #0a7274;" for="contraseña">Contraseña:</label>
                   <input type="password" id="contraseña" name="contraseña" class="au-input au-input--full"
                     placeholder="Contraseña">
                 </div>
@@ -63,7 +68,7 @@
               <div class="register-link">
                 <p>
                   ¿No tienes una cuenta?
-                  <a href="registro.html">Regístrate aquí</a>
+                  <a style="color:  #0a7274;" href="registro.html">Regístrate aquí</a>
                 </p>
               </div>
             </div>
