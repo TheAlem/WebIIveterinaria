@@ -81,7 +81,7 @@
             <div class="container-fluid">
                 <div class="header-mobile-inner">
                     <a class="logo" href="index.html">
-                        <img src="../images/icon/logo.png" alt="CoolAdmin" />
+                        <img  style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Logo Vet" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
@@ -187,7 +187,7 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img  style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Logo Vet" />
                                     </div>
                                     <div class="content">
                                         <a class="js-acc-btn" href="#">john doe</a>
@@ -195,8 +195,8 @@
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
                                             <div class="image">
-                                                <a href="#">
-                                                    <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                                <a href="info.html">
+                                                    <img  style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Logo Vet" />
                                                 </a>
                                             </div>
                                             <div class="content">
