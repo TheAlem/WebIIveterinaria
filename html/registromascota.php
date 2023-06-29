@@ -131,7 +131,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="info.html">
 <img  style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Logo Vet" />                </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
