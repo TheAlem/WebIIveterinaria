@@ -74,7 +74,7 @@
                         <i class="fas fa-table"></i>Servicios</a>
                 </li>
                 <li>
-                    <a href="citas.html">
+                    <a href="citas.php">
                         <i class="far fa-check-square"></i>Citas</a>
                 </li>
                 <li>
