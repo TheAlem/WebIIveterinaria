@@ -860,12 +860,12 @@ background-size: cover;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: #4272d7;
+    background-color: #0a7274;
     margin-left: -3px;
 }
 
 .au-btn--submit:hover {
-    background: #3868cd;
+    background: #0bb7ba;
 }
 
 .au-btn--submit > i {
@@ -994,7 +994,7 @@ background-size: cover;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background: #4272d7;
+    background-color: #0a7274;
 }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
@@ -1206,7 +1206,7 @@ background-size: cover;
 
 /* ----- Header ----- */
 .header-desktop {
-    background: #f5f5f5;
+    background: #8fcbcc;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -1562,7 +1562,7 @@ background-size: cover;
 }
 
 .account-dropdown__item a:hover {
-    background: #4272d7;
+    background: #0bb7ba;
     color: #fff;
 }
 
@@ -1589,7 +1589,7 @@ background-size: cover;
 }
 
 .account-dropdown__footer a:hover {
-    background: #4272d7;
+    background: #0bb7ba;
     color: #fff;
 }
 
@@ -1611,7 +1611,7 @@ background-size: cover;
 }
 
 .menu-sidebar .logo {
-    background: #f5f5f5;
+    background: #b9ddde;
     height: 75px;
     padding: 0 35px;
     display: -webkit-box;
@@ -1665,11 +1665,11 @@ background-size: cover;
 }
 
 .navbar-sidebar .navbar__list li a:hover {
-    color: #4272d7;
+    background: #b9ddde;
 }
 
 .navbar-sidebar .navbar__list li.active > a {
-    color: #4272d7;
+    color: #0a7274;
 }
 
 .has-sub {
@@ -1782,7 +1782,7 @@ background-size: cover;
 }
 
 .header-mobile .navbar-mobile .navbar-mobile__list li a:hover {
-    color: #4272d7;
+    background: #0bb7ba;
 }
 
 .header-mobile .navbar-mobile .navbar-mobile__list li a > i {
@@ -1945,12 +1945,12 @@ background-size: cover;
     text-transform: capitalize;
     text-align: center;
     font-size: 14px;
-    color: #4272d7;
+    color:#0a7274;
     padding: 24px 0;
 }
 
 .mess__footer a:hover, .email__footer a:hover, .notifi__footer a:hover {
-    color: #3868cd;
+    background: #0bb7ba;
 }
 
 .mess-dropdown {
@@ -2165,7 +2165,7 @@ background-size: cover;
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: #365cad;
+    background: #8fcbcc;;
     padding: 0 35px;
 }
 
@@ -2270,7 +2270,7 @@ background-size: cover;
 }
 
 .navbar-sidebar2 .navbar__list li:hover > a {
-    color: #4272d7;
+    background: #0bb7ba;
 }
 
 .navbar-sidebar2 .navbar__list li a {
@@ -2286,7 +2286,7 @@ background-size: cover;
 }
 
 .navbar-sidebar2 .navbar__list li.active > a {
-    color: #4272d7;
+    background-color: #0a7274;
 }
 
 .navbar-sidebar2 .navbar__sub-list {
@@ -2294,7 +2294,7 @@ background-size: cover;
 }
 
 .navbar-sidebar2 .navbar__sub-list li {
-    background: #f5f5f5;
+    background: #8fcbcc;
 }
 
 .navbar-sidebar2 .navbar__sub-list li a {
@@ -2324,7 +2324,7 @@ background-size: cover;
 
 .header-desktop2 {
     height: 75px;
-    background: #4272d7;
+    background:#0a7274;
     position: fixed;
     z-index: 1001;
     top: 0;
@@ -2724,7 +2724,7 @@ background-size: cover;
 }
 
 .header__navbar ul li a:hover {
-    color: #4272d7;
+    background: #0bb7ba;
 }
 
 .header__navbar ul li a:hover .bot-line {
@@ -2758,7 +2758,7 @@ background-size: cover;
 }
 
 .header__navbar ul li.active > a {
-    color: #4272d7;
+    background-color: #0a7274;
 }
 
 .header__navbar ul li.active > a .bot-line {
@@ -2825,7 +2825,7 @@ background-size: cover;
 }
 
 .header__navbar .header3-sub-list li a:hover {
-    color: #4272d7;
+    color: #0bb7ba;
     background: #f7f7f7;
 }
 
@@ -3067,7 +3067,7 @@ background-size: cover;
 }
 
 .navbar-sidebar3 .navbar__list li.active > a {
-    background: #4272d7;
+    background-color: #0a7274;
     color: #fff;
 }
 
@@ -14605,7 +14605,7 @@ background-size: cover;
 }
 
 .bg-overlay--blue {
-    background: rgba(49, 89, 253, 0.9);
+    background:#11998e;
 }
 
 .bg-c1 {
