@@ -49,8 +49,8 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="../images/icon/logo.png" alt="CoolAdmin" />
+                        <a href="info.html">
+                            <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -97,8 +97,8 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <a href="info.html">
+                    <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -145,7 +145,7 @@
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
                                 <input class="au-input au-input--xl" type="text" name="search"
-                                    placeholder="Search for datas &amp; reports..." />
+                                    placeholder="Busca datos &amp; reportes..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -156,37 +156,37 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="../images/icon/diegom.png" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">Diego Molina</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        <img src="../images/icon/diegom.png" alt="John Doe" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">Diego Molina</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">dieguito@example.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                        <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                        <i class="zmdi zmdi-settings"></i>Configuraciones</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                        <i class="zmdi zmdi-money-box"></i>Billetera</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
@@ -210,20 +210,20 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- Aquí inicia tu formulario -->
-                                <center> <h1>Registro de Citas</h1></center>
+                                <center> <h1 style="color: #0a3e3e;">Registro de Citas</h1></center><br>
                                 <form class="formulario-producto" method="post" action="../php/crud_citas.php">
-                                    <label for="id_mascota">ID de la Mascota:</label><br>
+                                    <label style="color: #0a5b5c;"for="id_mascota">ID de la Mascota:</label><br>
                                     <input type="number" id="id_mascota" name="id_mascota" required><br>
-                                    <label for="fecha">Fecha:</label><br>
+                                    <label style="color: #0a5b5c;" for="fecha">Fecha:</label><br>
                                     <input type="date" id="fecha" name="fecha" required><br>
-                                    <label for="hora">Hora:</label><br>
+                                    <label style="color: #0a5b5c;" for="hora">Hora:</label><br>
                                     <input type="time" id="hora" name="hora" required><br>
-                                    <label for="motivo">Motivo:</label><br>
+                                    <label style="color: #0a5b5c;" for="motivo">Motivo:</label><br>
                                     <input type="text" id="motivo" name="motivo" required><br>
-                                    <label for="notas">Notas:</label><br>
+                                    <label style="color: #0a5b5c;" for="notas">Notas:</label><br>
                                     <textarea id="notas" name="notas" required></textarea><br>
                                     <input type="hidden" name="action" value="create">
-                                    <input type="submit" value="Registrar Cita">
+                                    <input type="submit" style="background-color: #0a3e3e;" class="button" value="Registrar Cita">
                                 </form>
                                 <div class="success-message" id="success-message" style="display: none;">
                                     Cita enviada correctamente.

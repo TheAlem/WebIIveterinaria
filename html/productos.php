@@ -45,8 +45,8 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
-                        <img src="../images/icon/logo.png" alt="CoolAdmin" />
+                    <a href="#">
+                        <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
@@ -94,7 +94,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="images/icon/logo.png" alt="Cool Admin" />
+                <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -141,7 +141,7 @@
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
                             <input class="au-input au-input--xl" type="text" name="search"
-                                placeholder="Search for datas &amp; reports..." />
+                                placeholder="Busca datos &amp; reportes..." />
                             <button class="au-btn--submit" type="submit">
                                 <i class="zmdi zmdi-search"></i>
                             </button>
@@ -152,37 +152,37 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="../images/icon/karen.png" alt="John Doe" />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">john doe</a>
+                                        <a class="js-acc-btn" href="#">karen flores</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    <img src="../images/icon/karen.png" alt="Karen Flores" />
                                                 </a>
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">john doe</a>
+                                                    <a href="#">Karen Flores</a>
                                                 </h5>
-                                                <span class="email">johndoe@example.com</span>
+                                                <span class="email">kvflores@example.com</span>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__body">
                                             <div class="account-dropdown__item">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-account"></i>Account</a>
+                                                    <i class="zmdi zmdi-account"></i>Cuenta</a>
                                             </div>
                                             <div class="account-dropdown__item">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                    <i class="zmdi zmdi-settings"></i>Configuración</a>
                                             </div>
                                             <div class="account-dropdown__item">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                    <i class="zmdi zmdi-money-box"></i>Billetera</a>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">
@@ -206,23 +206,23 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="containerp">
-                                <center><h2>Formulario de Productos</h2></center>  
+                                <center><h2 style="color: #0a3e3e;">Formulario de Productos</h2></center>  <br>
                                 <form class="formulario-producto" action="../php/crud_productos.php" method="post">
                                     <input type="hidden" name="action" value="create">
-                                    <label for="nombre">Nombre:</label><br>
+                                    <label style="color: #0a5b5c;" for="nombre">Nombre:</label><br>
                                     <input type="text" id="nombre" name="nombre"><br>
-                                    <label for="descripcion">Descripción:</label><br>
+                                    <label style="color: #0a5b5c;" for="descripcion">Descripción:</label><br>
                                     <input type="text" id="descripcion" name="descripcion"><br>
-                                    <label for="cantidad_stock">Cantidad en Stock:</label><br>
+                                    <label style="color: #0a5b5c;" for="cantidad_stock">Cantidad en Stock:</label><br>
                                     <input type="number" id="cantidad_stock" name="cantidad_stock"><br>
-                                    <label for="proveedor">Proveedor:</label><br>
+                                    <label style="color: #0a5b5c;" for="proveedor">Proveedor:</label><br>
                                     <input type="text" id="proveedor" name="proveedor"><br>
-                                    <label for="precio_unitario">Precio Unitario:</label><br>
+                                    <label style="color: #0a5b5c;" for="precio_unitario">Precio Unitario:</label><br>
                                     <input type="number" id="precio_unitario" name="precio_unitario" step=".01"><br>
                                     <input type="submit" value="Crear Producto">
-                                </form>
+                                </form> <br>
 
-                                <h2>Tabla de Productos</h2>
+                                <h2 style="color: #0a3e3e;">Tabla de Productos</h2>
                                 <table border="1">
                                     <thead>
                                         <tr>

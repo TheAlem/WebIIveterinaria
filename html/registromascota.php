@@ -55,7 +55,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* Color de fondo personalizado (azul) */
+    background-color:#0a5b5c;/* Color de fondo personalizado (azul) */
     color: #fff; /* Color de texto personalizado */
     border: none;
     border-radius: 5px; /* Radio de borde personalizado */
@@ -63,7 +63,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
 }
 
 .button:hover {
-  background-color: #0069D9; /* Cambio de color al pasar el cursor (azul más oscuro) */
+  background-color:#0a3e3e; /* Cambio de color al pasar el cursor (azul más oscuro) */
 }
 
 .button.secondary {
@@ -83,8 +83,8 @@ if ($_SESSION['rol'] !== 'Administrador') {
     <div class="header-mobile__bar">
         <div class="container-fluid">
             <div class="header-mobile-inner">
-                <a class="logo" href="index.html">
-                    <img src="../images/icon/logo.png" alt="CoolAdmin" />
+                <a href="#">
+                    <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
                     <span class="hamburger-box">
@@ -132,7 +132,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -179,7 +179,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
                                 <input class="au-input au-input--xl" type="text" name="search"
-                                    placeholder="Search for datas &amp; reports..." />
+                                    placeholder="Busca datos &amp; reportes..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -190,37 +190,37 @@ if ($_SESSION['rol'] !== 'Administrador') {
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="../images/icon/karen.png" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">Karen Flores</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        <img src="../images/icon/karen.png" alt="John Doe" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">Karen Flores</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">kvflores@example.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                        <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                        <i class="zmdi zmdi-settings"></i>Configuraciones</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                        <i class="zmdi zmdi-money-box"></i>Billetera</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
@@ -244,40 +244,40 @@ if ($_SESSION['rol'] !== 'Administrador') {
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="containerp">
-                                    <h2>Registro de Mascotas</h2>
+                                    <h2 style="color: #0a3e3e;">Registro de Mascotas</h2><br>
                                     <?php
                                     session_start();
                                     $mascotas = $_SESSION['mascotas'] ?? [];
                                     ?>
 
-                                    <h3>Datos del Dueño</h3>
+                                    <h4 style="color: #0a3e3e;">Datos del Dueño</h4>
                                     <form action="../php/crud_mascota.php" method="post">
                                         <input type="hidden" name="action" value="get_owner">
                                         <label for="id_cliente_dueno">ID del Cliente:</label><br>
-                                        <input type="text" id="id_cliente_dueno" name="id_cliente_dueno">
+                                        <input style="height: 45px; width:350px" type="text" id="id_cliente_dueno" name="id_cliente_dueno">
                                         <input type="submit" class="button"  value="Mostrar Datos del Dueño">
-                                    </form>
+                                    </form><br>
 
-                                <center><h3>Registro de mascota</h3></center>
+                                <center><h3 style="color: #0a3e3e;">Registro de mascota</h3></center><br>
                                     <form class="formulario-producto" action="../php/crud_mascota.php" method="post">
                                         <input type="hidden" name="action" value="create">
-                                        <label for="id_cliente">ID Cliente:</label><br>
+                                        <label style="color: #0a5b5c;" for="id_cliente">ID Cliente:</label><br>
                                         <input type="text" id="id_cliente" name="id_cliente"><br>
-                                        <label for="nombre">Nombre:</label><br>
+                                        <label style="color: #0a5b5c;" for="nombre">Nombre:</label><br>
                                         <input type="text" id="nombre" name="nombre"><br>
-                                        <label for="especie">Especie:</label><br>
+                                        <label style="color: #0a5b5c;" for="especie">Especie:</label><br>
                                         <input type="text" id="especie" name="especie"><br>
-                                        <label for="raza">Raza:</label><br>
+                                        <label style="color: #0a5b5c;" for="raza">Raza:</label><br>
                                         <input type="text" id="raza" name="raza"><br>
-                                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                                        <label style="color: #0a5b5c;" for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
                                         <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
-                                        <label for="peso">Peso:</label><br>
+                                        <label style="color: #0a5b5c;" for="peso">Peso:</label><br>
                                         <input type="text" id="peso" name="peso"><br>
-                                        <label for="color">Color:</label><br>
+                                        <label style="color: #0a5b5c;" for="color">Color:</label><br>
                                         <input type="text" id="color" name="color"><br>
-                                        <label for="historial_medico">Historial Médico:</label><br>
+                                        <label style="color: #0a5b5c;" for="historial_medico">Historial Médico:</label><br>
                                         <textarea id="historial_medico" name="historial_medico"></textarea><br>
-                                        <input type="submit" class="button"  value="Registrar">
+                                        <input type="submit" style="background-color: #0a3e3e;" class="button" value="Registrar">
                                     </form>
 
                                     <h3>Lista de Mascotas</h3>
