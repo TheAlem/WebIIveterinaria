@@ -33,6 +33,12 @@
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
 
+    <style>
+        .success-message {
+            color: #1cc88a;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -218,6 +224,9 @@
                                     <input type="hidden" name="action" value="create">
                                     <input type="submit" value="Registrar Cita">
                                 </form>
+                                <div class="success-message" id="success-message" style="display: none;">
+                                    Cita enviada correctamente.
+                                </div>
                                 <!-- Aquí finaliza tu formulario -->
                             </div>
                         </div>
@@ -237,6 +246,17 @@
             <!-- END MAIN CONTENT-->
         </div>
 
+        <script>
+            // Mostrar mensaje de éxito al enviar el formulario
+            const form = document.querySelector('form');
+            const successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Evitar envío del formulario por defecto
+                successMessage.style.display = 'block'; // Mostrar mensaje de éxito
+                form.reset(); // Limpiar el formulario
+            });
+        </script>
 </body>
 
 </html>
