@@ -40,10 +40,11 @@
 </head>
 <style>
     /* Estilos para los botones */
+/* Estilos para los botones */
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Color de fondo personalizado */
+    background-color: #007BFF; /* Color de fondo personalizado (azul) */
     color: #fff; /* Color de texto personalizado */
     border: none;
     border-radius: 5px; /* Radio de borde personalizado */
@@ -51,16 +52,17 @@
 }
 
 .button:hover {
-  background-color: #45a049; /* Cambio de color al pasar el cursor */
+  background-color: #0069D9; /* Cambio de color al pasar el cursor (azul más oscuro) */
 }
 
 .button.secondary {
-  background-color: #f44336; /* Color de fondo personalizado para botón secundario */
+  background-color: #F44336; /* Color de fondo personalizado para botón secundario (rojo) */
 }
 
 .button.secondary:hover {
-  background-color: #d32f2f; /* Cambio de color al pasar el cursor para botón secundario */
+  background-color: #D32F2F; /* Cambio de color al pasar el cursor para botón secundario (rojo más oscuro) */
 }
+
 </style>
 
 <body class="productoc">
@@ -241,7 +243,7 @@
                                     <form action="../php/crud_mascota.php" method="post">
                                         <input type="hidden" name="action" value="get_owner">
                                         <label for="id_cliente_dueno">ID del Cliente:</label><br>
-                                        <input type="text" id="id_cliente_dueno" name="id_cliente_dueno"><br>
+                                        <input type="text" id="id_cliente_dueno" name="id_cliente_dueno">
                                         <input type="submit" class="button"  value="Mostrar Datos del Dueño">
                                     </form>
 
