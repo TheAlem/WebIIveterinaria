@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro de Citas</title>
+</head>
+
+<body>
+    <h1>Registro de Citas</h1>
+    <form method="post" action="../php/crud_citas.php">
+        <label for="id_mascota">ID de la Mascota:</label><br>
+        <input type="number" id="id_mascota" name="id_mascota" required><br>
+        <label for="fecha">Fecha:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br>
+        <label for="hora">Hora:</label><br>
+        <input type="time" id="hora" name="hora" required><br>
+        <label for="motivo">Motivo:</label><br>
+        <input type="text" id="motivo" name="motivo" required><br>
+        <label for="notas">Notas:</label><br>
+        <textarea id="notas" name="notas" required></textarea><br>
+        <input type="hidden" name="action" value="create">
+        <input type="submit" value="Registrar Cita">
+    </form>
+</body>
+
+</html>
