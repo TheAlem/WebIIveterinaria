@@ -42,89 +42,91 @@
 <body>
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
-        <header class="header-mobile d-block d-lg-none">
-            <div class="header-mobile__bar">
-                <div class="container-fluid">
-                    <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="../images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
-                        <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
+<header class="header-mobile d-block d-lg-none">
+    <div class="header-mobile__bar">
+        <div class="container-fluid">
+            <div class="header-mobile-inner">
+                <a class="logo" href="index.html">
+                    <img src="../images/icon/logo.png" alt="CoolAdmin" />
+                </a>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
-            <nav class="navbar-mobile">
-                <div class="container-fluid">
-                    <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="main">
-                                <i class="fas fa-tachometer-alt"></i>Menu principal</a>
+        </div>
+    </div>
+    <nav class="navbar-mobile">
+        <div class="container-fluid">
+            <ul class="navbar-mobile__list list-unstyled">
+                <li class="has-sub">
+                    <a class="js-arrow" href="info.html">
+                        <i class="fas fa-tachometer-alt"></i>Menu principal</a>
 
-                        </li>
-                        <li>
-                            <a href="producto">
-                                <i class="fas fa-chart-bar"></i>Producto</a>
-                        </li>
-                        <li>
-                            <a href="usuario">
-                                <i class="fas fa-table"></i>Usuario</a>
-                        </li>
-                        <li>
-                            <a href="compra">
-                                <i class="far fa-check-square"></i>Compra</a>
-                        </li>
-                        <li>
-                            <a href="venta">
-                                <i class="fas fa-calendar-alt"></i>Venta</a>
-                        </li>
-                        <li>
-                            <a href="cliente">
-                                <i class="fas fa-user"></i>Cliente</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- END HEADER MOBILE-->
-
+                </li>
+                <li>
+                    <a href="productos.php">
+                        <i class="fas fa-chart-bar"></i>Producto</a>
+                </li>
+                <li>
+                    <a href="servicios.html">
+                        <i class="fas fa-table"></i>Servicios</a>
+                </li>
+                <li>
+                    <a href="citas.html">
+                        <i class="far fa-check-square"></i>Citas</a>
+                </li>
+                <li>
+                    <a href="registrocliente.php">
+                        <i class="fas fa-calendar-alt"></i>Clientes</a>
+                </li>
+                <li>
+                    <a href="registromascota.php">
+                        <i class="fas fa-map-marker-alt"></i>Mascotas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- END HEADER MOBILE-->
+        
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="../images/icon/logo.png" alt="Cool Admin" />
+                    <img src="images/icon/logo.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="main">
+                            <a class="js-arrow" href="info.html">
                                 <i class="fas fa-bars"></i>Menu principal</a>
                         </li>
                         <li>
-                            <a href="producto">
-                                <i class="fas fa-chart-bar"></i>Producto</a>
+                            <a href="productos.php">
+                                <i class="fas fa-shopping-bag"></i>Productos</a>
                         </li>
                         <li>
-                            <a href="usuario">
-                                <i class="fas fa-table"></i>Usuario</a>
+                            <a href="servicios.html">
+                                <i class="fas fa-shopping-cart"></i>Servicios</a>
                         </li>
                         <li>
-                            <a href="compra">
-                                <i class="far fa-check-square"></i>Compra</a>
+                            <a href="citas.html">
+                                <i class="fas fa-calendar-alt"></i>Citas</a>
                         </li>
                         <li>
-                            <a href="venta">
-                                <i class="fas fa-calendar-alt"></i>Venta</a>
+                            <a href="registrocliente.php">
+                                <i class="fas fa-user"></i>Clientes</a>
                         </li>
                         <li>
-                            <a href="cliente">
-                                <i class="fas fa-user"></i>Cliente</a>
+                            <a href="registromascota.php">
+                                <i class="fas fa-paw"></i>Mascotas</a>
                         </li>
+                    </ul>
+                    </li>
                     </ul>
                 </nav>
             </div>
@@ -239,7 +241,7 @@
                                     </div>
                                 </div>
                             </div>
-                             <h2>Lista de Clientes</h2>
+                            <h2>Lista de Clientes</h2>
             <table>
                 <tr>
                     <th>ID</th>
