@@ -35,7 +35,42 @@
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="../css/form.css" media="all">
+<style>
+        .input-field {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
+.btn-update {
+    background-color: #0000FF; /* Azul */
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background-color: #000099; /* Azul más oscuro para el hover */
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+</style>
 
 </head>
 <body  class="productoc">
