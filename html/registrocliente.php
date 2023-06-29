@@ -51,7 +51,43 @@ if ($_SESSION['rol'] != 'Administrador') {
 
     <link rel="stylesheet" href="../css/form.css" media="all">
 </head>
+<style>
+    .input-field {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
+.btn-update {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+
+</style>
 <body>
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
@@ -303,22 +339,31 @@ if ($_SESSION['rol'] != 'Administrador') {
                             <form action="../php/crud_clientes.php" method="post">
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>">
-                                <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>">
-                                <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>">
-                                <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>">
-                                <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>">
-                                <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>">
-                                <input type="submit" value="Actualizar">
+                                <div class="input-group">
+                                    <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>" placeholder="Nombre"
+                                        class="input-field">
+                                    <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>" placeholder="Apellido"
+                                        class="input-field">
+                                    <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>" placeholder="Dirección"
+                                        class="input-field">
+                                    <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>" placeholder="Ciudad"
+                                        class="input-field">
+                                    <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>" placeholder="Teléfono"
+                                        class="input-field">
+                                    <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>"
+                                        placeholder="Correo" class="input-field">
+                                </div>
+                                <button type="submit" class="btn-update">Actualizar</button>
                             </form>
                             <form action="../php/crud_clientes.php" method="post">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <input type="submit" value="Eliminar">
+                                <button type="submit" class="btn-delete">Eliminar</button>
                             </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
+
             </table>
 
                         </div>
