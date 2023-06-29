@@ -257,8 +257,8 @@ if ($_SESSION['rol'] !== 'Administrador') {
                                         <input type="submit" class="button"  value="Mostrar Datos del Dueño">
                                     </form>
 
-                                    <h3>Registro de mascota</h3>
-                                    <form action="../php/crud_mascota.php" method="post">
+                                <center><h3>Registro de mascota</h3></center>
+                                    <form class="formulario-producto" action="../php/crud_mascota.php" method="post">
                                         <input type="hidden" name="action" value="create">
                                         <label for="id_cliente">ID Cliente:</label><br>
                                         <input type="text" id="id_cliente" name="id_cliente"><br>

@@ -48,6 +48,8 @@ if ($_SESSION['rol'] != 'Administrador') {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../css/stylescrudcliente.css">
+
+    <link rel="stylesheet" href="../css/form.css" media="all">
 </head>
 
 <body>
@@ -219,10 +221,10 @@ if ($_SESSION['rol'] != 'Administrador') {
                             <div class="col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
-                                        <strong>Registro de Cliente</strong>
+                                <center><strong>Registro de Cliente</strong></center>
                                     </div>
                                     <div class="card-body card-block">
-                                        <form action="../php/crud_cliente.php" method="post">
+                                        <form class="formulario-producto" action="../php/crud_cliente.php" method="post">
                                             <input type="hidden" name="action" value="create">
                                             <div class="form-group">
                                                 <label for="nombre" class="form-control-label">Nombre:</label>

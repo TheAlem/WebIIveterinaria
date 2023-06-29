@@ -32,53 +32,14 @@
 
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
-
+    <link rel="stylesheet" href="../css/form.css" media="all">
     <style>
         .success-message {
             color: #1cc88a;
             margin-top: 10px;
         }
     </style>
-    <style>
-    .formulario-producto {
-        width: 80%;
-        margin: auto;
-        background: #f8f9fa;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    }
 
-    .formulario-producto label {
-        display: block;
-        margin: 10px 0px 5px 0px;
-        color: #333;
-        font-weight: bold;
-    }
-
-    .formulario-producto input[type="text"], .formulario-producto input[type="number"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
-    .formulario-producto input[type="submit"] {
-        display: block;
-        width: 200px;
-        margin: 20px auto;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .formulario-producto input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
-</style>
 </head>
 
 <body>
