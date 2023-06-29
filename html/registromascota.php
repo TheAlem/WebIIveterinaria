@@ -47,8 +47,34 @@ if ($_SESSION['rol'] !== 'Administrador') {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../css/stylecrudmascota.css">
-    <link rel="stylesheet" href="../css/form.css" media="all">
+    <link rel="stylesheet" href="../css/form.css">
 </head>
+<style>
+    /* Estilos para los botones */
+/* Estilos para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Color de fondo personalizado (azul) */
+    color: #fff; /* Color de texto personalizado */
+    border: none;
+    border-radius: 5px; /* Radio de borde personalizado */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0069D9; /* Cambio de color al pasar el cursor (azul más oscuro) */
+}
+
+.button.secondary {
+  background-color: #F44336; /* Color de fondo personalizado para botón secundario (rojo) */
+}
+
+.button.secondary:hover {
+  background-color: #D32F2F; /* Cambio de color al pasar el cursor para botón secundario (rojo más oscuro) */
+}
+
+</style>
 
 <body>
     <div class="page-wrapper">
