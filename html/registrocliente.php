@@ -266,6 +266,16 @@ if ($_SESSION['rol'] != 'Administrador') {
                     <th>Correo Electrónico</th>
                     <th>Acciones</th>
                 </tr>
+                <?php
+                require_once '../php/db_config.php'; // Reemplaza con la ruta a tu archivo de base de datos
+                
+                // Realizar consulta a la base de datos
+                $stmt = $conn->prepare("SELECT * FROM Clientes"); // Asegúrate de que 'Clientes' es el nombre correcto de tu tabla
+                $stmt->execute();
+
+                // Fetch all rows as an associative array
+                $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                ?>
                 <?php foreach ($clientes as $cliente): ?>
                     <tr>
                         <td>
