@@ -296,7 +296,8 @@
                 <?php endforeach; ?>
             </table>
 
-            <!-- Footer -->
+                        </div>
+                        <!-- Footer -->
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="copyright">
@@ -305,7 +306,6 @@
                                     </div>
                                 </div>
                                 <!-- End of Footer -->
-                        </div>
                     </div>
                 </div>
             </div>
