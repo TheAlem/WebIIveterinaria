@@ -2,7 +2,7 @@
 session_start();
 
 // Verificar si el usuario tiene rol de administrador
-if ($_SESSION['rol'] !== 'Administrador') {
+if ($_SESSION['rol'] != 'admin') {
     // Redirigir a una página de acceso denegado o mostrar un mensaje de error
     header('Location: acceso_denegado.html');
     exit();
