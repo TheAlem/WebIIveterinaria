@@ -9,6 +9,8 @@
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
+    <link rel="icon" href="../images/icon/referir.png" type="image/x-icon">
+
     <!-- Title Page-->
     <title>Registro de Usuario</title>
 
@@ -36,6 +38,7 @@
 </head>
 
 <body class="animsition">
+    <div id="background"></div>
     <div class="page-wrapper">
         <div class="page-content--bge5">
             <div class="container">
@@ -43,28 +46,28 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="registro.html">
-                                <img src="../images/icon/logo.png" alt="CoolAdmin">
+                                <img src="../images/icon/referir.png" style="height: 80px; width:80px" alt="Usuario">
                             </a>
                         </div>
                         <div class="login-form">
                             <form action="../php/registro.php" method="post">
                                 <div class="form-group">
-                                    <label>Nombre de Usuario</label>
+                                    <label style="color:  #0a7274;">Nombre de Usuario</label>
                                     <input class="au-input au-input--full" type="text" name="nombre_usuario"
                                         placeholder="Nombre de Usuario" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Correo Electrónico</label>
+                                    <label style="color:  #0a7274;">Correo Electrónico</label>
                                     <input class="au-input au-input--full" type="email" name="correo"
                                         placeholder="Correo Electrónico" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Contraseña</label>
+                                    <label style="color:  #0a7274;">Contraseña</label>
                                     <input class="au-input au-input--full" type="password" name="contraseña"
                                         placeholder="Contraseña" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Rol</label>
+                                    <label style="color:  #0a7274;">Rol</label>
                                     <select class="au-input au-input--full" name="rol" required>
                                         <option value="Usuario">Usuario</option>
                                         <option value="Administrador">Administrador</option>
@@ -76,7 +79,7 @@
                             <div class="register-link">
                                 <p>
                                     ¿Ya tienes una cuenta?
-                                    <a href="login.html">Inicia sesión aquí</a>
+                                    <a style="color:  #0a7274;" href="login.html">Inicia sesión aquí</a>
                                 </p>
                             </div>
                         </div>
