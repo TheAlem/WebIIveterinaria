@@ -60,7 +60,7 @@ if ($_SESSION['rol'] != 'Administrador') {
 }
 
 .btn-update {
-    background-color: #4CAF50;
+    background-color: #0000FF; /* Azul */
     color: white;
     padding: 5px 10px;
     margin: 5px;
@@ -70,7 +70,7 @@ if ($_SESSION['rol'] != 'Administrador') {
 }
 
 .btn-update:hover {
-    background-color: #45a049;
+    background-color: #000099; /* Azul más oscuro para el hover */
 }
 
 .btn-delete {
