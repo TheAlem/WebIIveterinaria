@@ -65,7 +65,7 @@
 
 </style>
 
-<body class="productoc">
+<body>
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
