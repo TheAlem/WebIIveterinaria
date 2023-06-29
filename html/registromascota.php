@@ -271,22 +271,22 @@
 
                                     <h3>Lista de Mascotas</h3>
                                     <table border="1">
-    <thead>
-        <tr>
-            <th>ID Mascota</th>
-            <th>ID Cliente</th>
-            <th>Nombre</th>
-            <th>Especie</th>
-            <th>Raza</th>
-            <th>Fecha Nacimiento</th>
-            <th>Peso</th>
-            <th>Color</th>
-            <th>Historial Médico</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($mascotas as $mascota): ?>
+                                        <thead>
+                                            <tr>
+                                                <th>ID Mascota</th>
+                                                <th>ID Cliente</th>
+                                                <th>Nombre</th>
+                                                <th>Especie</th>
+                                                <th>Raza</th>
+                                                <th>Fecha Nacimiento</th>
+                                                <th>Peso</th>
+                                                <th>Color</th>
+                                                <th>Historial Médico</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($mascotas as $mascota): ?>
                                                 <tr>
                                                     <td>
                                                         <?php echo $mascota["ID_Mascota"]; ?>
