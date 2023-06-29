@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Registro de Cliente</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/stylescrudcliente.css">
-</head>
-<body>
-
-
-
-
-
-
-    
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,11 +9,12 @@
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
+    <link rel="icon" href="../images/icon/comprar.png" type="image/x-icon">
+
     <!-- Title Page-->
-    <title>Principal</title>
+    <title>Registro de Cliente</title>
 
     <!-- Fontfaces CSS-->
-    <link rel="stylesheet" href="../css/stylescrudcliente.css">
     <link href="../css/font-face.css" rel="stylesheet" media="all">
     <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="../vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
@@ -54,9 +35,11 @@
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/stylescrudcliente.css">
 </head>
 
-<body class="animsition">
+<body>
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
@@ -80,7 +63,7 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="main">
                                 <i class="fas fa-tachometer-alt"></i>Menu principal</a>
-        
+
                         </li>
                         <li>
                             <a href="producto">
@@ -91,113 +74,57 @@
                                 <i class="fas fa-table"></i>Usuario</a>
                         </li>
                         <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
+                            <a href="compra">
+                                <i class="far fa-check-square"></i>Compra</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                            <a href="venta">
+                                <i class="fas fa-calendar-alt"></i>Venta</a>
                         </li>
                         <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
+                            <a href="cliente">
+                                <i class="fas fa-user"></i>Cliente</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- END HEADER MOBILE-->
-        
+
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img src="../images/icon/logo.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="dashboard.html">
+                            <a class="js-arrow" href="main">
                                 <i class="fas fa-bars"></i>Menu principal</a>
                         </li>
                         <li>
-                            <a href="productos.html">
-                                <i class="fas fa-shopping-bag"></i>Productos</a>
+                            <a href="producto">
+                                <i class="fas fa-chart-bar"></i>Producto</a>
                         </li>
                         <li>
-                            <a href="servicios.html">
-                                <i class="fas fa-shopping-cart"></i>Servicios</a>
+                            <a href="usuario">
+                                <i class="fas fa-table"></i>Usuario</a>
                         </li>
                         <li>
-                            <a href="citas.html">
-                                <i class="fas fa-calendar-alt"></i>Citas</a>
+                            <a href="compra">
+                                <i class="far fa-check-square"></i>Compra</a>
                         </li>
                         <li>
-                            <a href="registrocliente.php">
-                                <i class="fas fa-user"></i>Clientes</a>
+                            <a href="venta">
+                                <i class="fas fa-calendar-alt"></i>Venta</a>
                         </li>
                         <li>
-                            <a href="registromascota.php">
-                                <i class="fas fa-paw"></i>Mascotas</a>
+                            <a href="cliente">
+                                <i class="fas fa-user"></i>Cliente</a>
                         </li>
-                    </ul>
-                    </li>
                     </ul>
                 </nav>
             </div>
@@ -211,37 +138,109 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-
-
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                    placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap">
+                                </div>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">john doe</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">john doe</a>
+                                                    </h5>
+                                                    <span class="email">johndoe@example.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
             <!-- HEADER DESKTOP-->
-            <h1>Registro de Cliente</h1>
-    <?php
-            session_start();
-            $clientes = $_SESSION['clientes'] ?? [];
-            ?>
-            
-            <form action="../php/crud_clientes.php" method="post">
-                <input type="hidden" name="action" value="create">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br>
-                <label for="apellido">Apellido:</label><br>
-                <input type="text" id="apellido" name="apellido"><br>
-                <label for="direccion">Dirección:</label><br>
-                <input type="text" id="direccion" name="direccion"><br>
-                <label for="ciudad">Ciudad:</label><br>
-                <input type="text" id="ciudad" name="ciudad"><br>
-                <label for="telefono">Teléfono:</label><br>
-                <input type="text" id="telefono" name="telefono"><br>
-                <label for="correo">Correo Electrónico:</label><br>
-                <input type="text" id="correo" name="correo"><br>
-                <input type="submit" value="Registrar">
-            </form>
-            
-            <h2>Lista de Clientes</h2>
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Registro de Cliente</strong>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="../php/crud_cliente.php" method="post">
+                                            <input type="hidden" name="action" value="create">
+                                            <div class="form-group">
+                                                <label for="nombre" class="form-control-label">Nombre:</label>
+                                                <input type="text" id="nombre" name="nombre"
+                                                    placeholder="Ingrese el nombre" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="direccion" class="form-control-label">Dirección:</label>
+                                                <input type="text" id="direccion" name="direccion"
+                                                    placeholder="Ingrese la dirección" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="telefono" class="form-control-label">Teléfono:</label>
+                                                <input type="text" id="telefono" name="telefono"
+                                                    placeholder="Ingrese el teléfono" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="form-control-label">Email:</label>
+                                                <input type="email" id="email" name="email"
+                                                    placeholder="Ingrese el email" class="form-control">
+                                            </div>
+                                            <div class="form-actions form-group">
+                                                <button type="submit" class="btn btn-success">Registrar</button>
+                                                <button type="reset" class="btn btn-secondary">Limpiar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                                        <h2>Lista de Clientes</h2>
             <table>
                 <tr>
                     <th>ID</th>
@@ -298,49 +297,53 @@
                 <?php endforeach; ?>
             </table>
 
-                        <!-- Footer -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2023 Colorlib. All rights reserved. Template byGrupo con 4 cambas.</p>
+            <!-- Footer -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="copyright">
+                                            <p>Copyright © 2023 Colorlib. All rights reserved. Template byGrupo con 4 cambas.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <!-- End of Footer -->
                         </div>
-                        <!-- End of Footer -->
                     </div>
                 </div>
             </div>
+            
             <!-- END MAIN CONTENT-->
-            <!-- END PAGE CONTAINER-->
-        </div>
 
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer">
+                        <p>© 2023 Colorlib. All rights reserved. Template by Grupo con 4 cambas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Footer -->
+        </div>
     </div>
 
-    <!-- Jquery JS-->
-    <script src="../vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
+    <script src="../vendor/jquery-3.2.1.min.js"></script>
     <script src="../vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="../vendor/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS       -->
-    <script src="../vendor/slick/slick.min.js">
-    </script>
+
+    <!-- Vendor JS -->
+    <script src="../vendor/slick/slick.min.js"></script>
     <script src="../vendor/wow/wow.min.js"></script>
     <script src="../vendor/animsition/animsition.min.js"></script>
-    <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-    </script>
+    <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <script src="../vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="../vendor/counter-up/jquery.counterup.min.js">
-    </script>
+    <script src="../vendor/counter-up/jquery.counterup.min.js"></script>
     <script src="../vendor/circle-progress/circle-progress.min.js"></script>
     <script src="../vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="../vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="../vendor/select2/select2.min.js">
-    </script>
+    <script src="../vendor/select2/select2.min.js"></script>
 
     <!-- Main JS-->
     <script src="../js/main.js"></script>
-
 </body>
 
 </html>
-<!-- end document-->
