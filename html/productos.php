@@ -235,36 +235,62 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            // Asegúrate de que tienes tu archivo db_config.php incluido aquí
-                                            // y luego incluye el código para recuperar tus productos
-                                            require_once "db_config.php";
+                                                    <?php
+                                                    require_once '../php/db_config.php'; // Reemplaza con la ruta a tu archivo de base de datos
+                                                    
+                                                    // Realizar consulta a la base de datos
+                                                    $stmt = $conn->prepare("SELECT * FROM Inventario"); // Asegúrate de que 'Inventario' es el nombre correcto de tu tabla
+                                                    $stmt->execute();
 
-                                            try {
-                                                $conn = new PDO("mysql:host=$host;dbname=$db_name", $db_username, $db_password);
-                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                                                $sql = "SELECT * FROM Inventario";
-                                                $stmt = $conn->query($sql);
-                                                $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                                                foreach ($productos as $producto) {
-                                                    echo "<tr>";
-                                                    echo "<td>" . $producto['ID_Producto'] . "</td>";
-                                                    echo "<td>" . $producto['Nombre'] . "</td>";
-                                                    echo "<td>" . $producto['Descripción'] . "</td>";
-                                                    echo "<td>" . $producto['Cantidad_Stock'] . "</td>";
-                                                    echo "<td>" . $producto['Proveedor'] . "</td>";
-                                                    echo "<td>" . $producto['Precio_Unitario'] . "</td>";
-                                                    echo "</tr>";
-                                                }
-
-                                                $stmt = null;
-                                                $conn = null;
-                                            } catch (PDOException $e) {
-                                                echo "Error al recuperar la lista de productos: " . $e->getMessage();
-                                            }
-                                            ?>
+                                                    // Fetch all rows as an associative array
+                                                    $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                    ?>
+                                                    <?php foreach ($productos as $producto): ?>
+                                                        <tr>
+                                                            <td>
+                                                                <?php echo $producto["ID_Producto"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Nombre"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Descripción"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Cantidad_Stock"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Proveedor"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Precio_Unitario"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <form action="../php/crud_productos.php" method="post">
+                                                                    <input type="hidden" name="action" value="update">
+                                                                    <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                                                                    <div class="input-group">
+                                                                        <input type="text" name="nombre" value="<?php echo $producto["Nombre"]; ?>" placeholder="Nombre"
+                                                                            class="input-field">
+                                                                        <input type="text" name="descripcion" value="<?php echo $producto["Descripción"]; ?>"
+                                                                            placeholder="Descripción" class="input-field">
+                                                                        <input type="text" name="cantidad_stock" value="<?php echo $producto["Cantidad_Stock"]; ?>"
+                                                                            placeholder="Cantidad en Stock" class="input-field">
+                                                                        <input type="text" name="proveedor" value="<?php echo $producto["Proveedor"]; ?>"
+                                                                            placeholder="Proveedor" class="input-field">
+                                                                        <input type="text" name="precio_unitario" value="<?php echo $producto["Precio_Unitario"]; ?>"
+                                                                            placeholder="Precio Unitario" class="input-field">
+                                                                    </div>
+                                                                    <button type="submit" class="btn-update">Actualizar</button>
+                                                                </form>
+                                                                <form action="../php/crud_productos.php" method="post">
+                                                                    <input type="hidden" name="action" value="delete">
+                                                                    <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                                                                    <button type="submit" class="btn-delete">Eliminar</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
