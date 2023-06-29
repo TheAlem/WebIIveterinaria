@@ -36,7 +36,7 @@
 </head>
 
 <body class="animsition">
-        <div class="page-wrapper">
+    <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">
@@ -59,7 +59,7 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="info.html">
                                 <i class="fas fa-tachometer-alt"></i>Menu principal</a>
-        
+
                         </li>
                         <li>
                             <a href="productos.php">
@@ -86,7 +86,7 @@
             </nav>
         </header>
         <!-- END HEADER MOBILE-->
-        
+
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
@@ -128,7 +128,7 @@
             </div>
         </aside>
         <!-- END MENU SIDEBAR-->
-        
+
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
@@ -195,7 +195,7 @@
                 </div>
             </header>
             <!-- HEADER DESKTOP-->
-            
+
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -225,7 +225,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2023 Colorlib. All rights reserved. Template by Grupo con 4 cambas.</p>
+                                    <p>Copyright © 2023 Colorlib. All rights reserved. Template by Grupo con
+                                        4 cambas.</p>
                                 </div>
                             </div>
                         </div>
