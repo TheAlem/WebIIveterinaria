@@ -35,7 +35,42 @@
     <!-- Main CSS-->
     <link href="../css/theme.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="../css/form.css" media="all">
+<style>
+        .input-field {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
+.btn-update {
+    background-color: #0000FF; /* Azul */
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background-color: #000099; /* Azul más oscuro para el hover */
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+</style>
 
 </head>
 <body  class="productoc">
@@ -45,8 +80,8 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a href="#">
-                        <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
+                    <a class="logo" href="productos.php">
+                        <img  style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Logo Vet" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
@@ -94,7 +129,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img style="height: 100px; width:100px" src="../images/icon/Logo Animales Gatos Cartel Mascotas Kawaii Ilustración Beige Marrón.png" alt="Cool Admin" />
+                <img src="images/icon/logo.png" alt="Cool Admin" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -152,7 +187,7 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="../images/icon/karen.png" alt="John Doe" />
+                                        <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
                                     </div>
                                     <div class="content">
                                         <a class="js-acc-btn" href="#">karen flores</a>
@@ -161,7 +196,7 @@
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="../images/icon/karen.png" alt="Karen Flores" />
+                                                    <img src="../images/icon/avatar-01.jpg" alt="John Doe" />
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -235,36 +270,62 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            // Asegúrate de que tienes tu archivo db_config.php incluido aquí
-                                            // y luego incluye el código para recuperar tus productos
-                                            require_once "db_config.php";
+                                                    <?php
+                                                    require_once '../php/db_config.php'; // Reemplaza con la ruta a tu archivo de base de datos
+                                                    
+                                                    // Realizar consulta a la base de datos
+                                                    $stmt = $conn->prepare("SELECT * FROM Inventario"); // Asegúrate de que 'Inventario' es el nombre correcto de tu tabla
+                                                    $stmt->execute();
 
-                                            try {
-                                                $conn = new PDO("mysql:host=$host;dbname=$db_name", $db_username, $db_password);
-                                                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                                                $sql = "SELECT * FROM Inventario";
-                                                $stmt = $conn->query($sql);
-                                                $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                                                foreach ($productos as $producto) {
-                                                    echo "<tr>";
-                                                    echo "<td>" . $producto['ID_Producto'] . "</td>";
-                                                    echo "<td>" . $producto['Nombre'] . "</td>";
-                                                    echo "<td>" . $producto['Descripción'] . "</td>";
-                                                    echo "<td>" . $producto['Cantidad_Stock'] . "</td>";
-                                                    echo "<td>" . $producto['Proveedor'] . "</td>";
-                                                    echo "<td>" . $producto['Precio_Unitario'] . "</td>";
-                                                    echo "</tr>";
-                                                }
-
-                                                $stmt = null;
-                                                $conn = null;
-                                            } catch (PDOException $e) {
-                                                echo "Error al recuperar la lista de productos: " . $e->getMessage();
-                                            }
-                                            ?>
+                                                    // Fetch all rows as an associative array
+                                                    $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                    ?>
+                                                    <?php foreach ($productos as $producto): ?>
+                                                        <tr>
+                                                            <td>
+                                                                <?php echo $producto["ID_Producto"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Nombre"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Descripción"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Cantidad_Stock"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Proveedor"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php echo $producto["Precio_Unitario"]; ?>
+                                                            </td>
+                                                            <td>
+                                                                <form action="../php/crud_productos.php" method="post">
+                                                                    <input type="hidden" name="action" value="update">
+                                                                    <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                                                                    <div class="input-group">
+                                                                        <input type="text" name="nombre" value="<?php echo $producto["Nombre"]; ?>" placeholder="Nombre"
+                                                                            class="input-field">
+                                                                        <input type="text" name="descripcion" value="<?php echo $producto["Descripción"]; ?>"
+                                                                            placeholder="Descripción" class="input-field">
+                                                                        <input type="text" name="cantidad_stock" value="<?php echo $producto["Cantidad_Stock"]; ?>"
+                                                                            placeholder="Cantidad en Stock" class="input-field">
+                                                                        <input type="text" name="proveedor" value="<?php echo $producto["Proveedor"]; ?>"
+                                                                            placeholder="Proveedor" class="input-field">
+                                                                        <input type="text" name="precio_unitario" value="<?php echo $producto["Precio_Unitario"]; ?>"
+                                                                            placeholder="Precio Unitario" class="input-field">
+                                                                    </div>
+                                                                    <button type="submit" class="btn-update">Actualizar</button>
+                                                                </form>
+                                                                <form action="../php/crud_productos.php" method="post">
+                                                                    <input type="hidden" name="action" value="delete">
+                                                                    <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                                                                    <button type="submit" class="btn-delete">Eliminar</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
