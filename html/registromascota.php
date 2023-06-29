@@ -74,45 +74,7 @@ if ($_SESSION['rol'] !== 'Administrador') {
   background-color: #D32F2F; /* Cambio de color al pasar el cursor para botón secundario (rojo más oscuro) */
 }
 
-
-.input-field {
-    padding: 5px;
-    margin: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.btn-update {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-update:hover {
-    background-color: #45a049;
-}
-
-.btn-delete {
-    background-color: #f44336;
-    color: white;
-    padding: 5px 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-delete:hover {
-    background-color: #da190b;
-}
-
 </style>
-
-
 
 <body>
     <div class="page-wrapper">
@@ -346,58 +308,50 @@ if ($_SESSION['rol'] !== 'Administrador') {
                                         // Fetch all rows as an associative array
                                         $mascotas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         ?>
-                                            <?php foreach ($clientes as $cliente): ?>
+                                            <?php foreach ($mascotas as $mascota): ?>
                                                 <tr>
                                                     <td>
-                                                        <?php echo $cliente["ID_Cliente"]; ?>
+                                                        <?php echo $mascota["ID_Mascota"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Nombre"]; ?>
+                                                        <?php echo $mascota["ID_Cliente"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Apellido"]; ?>
+                                                        <?php echo $mascota["Nombre"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Dirección"]; ?>
+                                                        <?php echo $mascota["Especie"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Ciudad"]; ?>
+                                                        <?php echo $mascota["Raza"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Teléfono"]; ?>
+                                                        <?php echo $mascota["Fecha_Nacimiento"]; ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $cliente["Correo_electrónico"]; ?>
+                                                        <?php echo $mascota["Peso"]; ?>
                                                     </td>
                                                     <td>
-                                                        <form action="../php/crud_clientes.php" method="post">
+                                                        <?php echo $mascota["Color"]; ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $mascota["Historial_Medico"]; ?>
+                                                    </td>
+                                                    <td>
+                                                        <form action="../php/crud_mascota.php" method="post">
                                                             <input type="hidden" name="action" value="update">
-                                                            <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                                            <div class="input-group">
-                                                                <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>" placeholder="Nombre"
-                                                                    class="input-field">
-                                                                <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>" placeholder="Apellido"
-                                                                    class="input-field">
-                                                                <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>" placeholder="Dirección"
-                                                                    class="input-field">
-                                                                <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>" placeholder="Ciudad"
-                                                                    class="input-field">
-                                                                <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>" placeholder="Teléfono"
-                                                                    class="input-field">
-                                                                <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>"
-                                                                    placeholder="Correo" class="input-field">
-                                                            </div>
-                                                            <button type="submit" class="btn-update">Actualizar</button>
+                                                            <input type="hidden" name="id_mascota" value="<?php echo $mascota["ID_Mascota"]; ?>">
+                                                            <!-- ... campos de actualización ... -->
+                                                            <input type="submit" class="button" value="Actualizar">
                                                         </form>
-                                                        <form action="../php/crud_clientes.php" method="post">
+                                                        <form action="../php/crud_mascota.php" method="post">
                                                             <input type="hidden" name="action" value="delete">
-                                                            <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                                            <button type="submit" class="btn-delete">Eliminar</button>
+                                                            <input type="hidden" name="id_mascota" value="<?php echo $mascota["ID_Mascota"]; ?>">
+                                                            <input type="submit" class="button secondary" value="Eliminar">
                                                         </form>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
-
                                         </tbody>
                                     </table>
                                 </div>
