@@ -253,7 +253,7 @@ if ($_SESSION['rol'] != 'Administrador') {
                                         </form>
                                     </div>
                                 </div>
-                            </div>
+                            </div><br>
                             <h2>Lista de Clientes</h2>
             <table>
                 <tr>
