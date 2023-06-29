@@ -11,18 +11,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nombre_usuario = $_POST['nombre_usuario'];
         $contraseña = $_POST['contraseña'];
 
-        $sql = "SELECT Contraseña, Rol FROM Usuarios WHERE Nombre_Usuario = ?";
+        $sql = "SELECT Contraseña, Rol FROM Usuarios WHERE Nombre_Usuario = :nombre_usuario";
         $stmt = $conn->prepare($sql);
 
         if ($stmt === false) {
             die('Error en la preparación: ' . htmlspecialchars($conn->errorInfo()));
         }
 
-        $stmt->bind_param("s", $nombre_usuario);
+        $stmt->bindParam(':nombre_usuario', $nombre_usuario);
         $stmt->execute();
 
-        $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user) {
             if (password_verify($contraseña, $user['Contraseña'])) {
@@ -43,5 +42,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$conn->close();
+$conn = null;
 ?>
