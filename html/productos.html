@@ -38,23 +38,24 @@
 </head>
 <body  class="productoc">
     <div class="containerp">
-    <h2>Formulario de Productos</h2>
+        
+    <h2 style="color:#064445;">Formulario de Productos</h2>
         <form action="../php/crud_productos.php" method="post">
-        <input type="hidden" name="action" value="create">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre"><br>
-        <label for="descripcion">Descripción:</label><br>
-        <input type="text" id="descripcion" name="descripcion"><br>
-        <label for="cantidad_stock">Cantidad en Stock:</label><br>
-        <input type="number" id="cantidad_stock" name="cantidad_stock"><br>
-        <label for="proveedor">Proveedor:</label><br>
-        <input type="text" id="proveedor" name="proveedor"><br>
-        <label for="precio_unitario">Precio Unitario:</label><br>
-        <input type="number" id="precio_unitario" name="precio_unitario" step=".01"><br>
-        <input type="submit" value="Crear Producto">
-    </form>
+        <input style="background-color:#4eaaab; " type="hidden" name="action" value="create">
+        <label style="color:#064445;" for="nombre">Nombre:</label><br>
+        <input style="background-color:#4eaaab; "  type="text" id="nombre" name="nombre"><br>
+        <label style="color:#064445;" for="descripcion">Descripción:</label><br>
+        <input style="background-color:#4eaaab; "  type="text" id="descripcion" name="descripcion"><br>
+        <label style="color:#064445;" for="cantidad_stock">Cantidad en Stock:</label><br>
+        <input style="background-color:#4eaaab; "  type="number" id="cantidad_stock" name="cantidad_stock"><br>
+        <label style="color:#064445;" for="proveedor">Proveedor:</label><br>
+        <input style="background-color:#4eaaab; "  type="text" id="proveedor" name="proveedor"><br>
+        <label style="color:#064445;" for="precio_unitario">Precio Unitario:</label><br>
+        <input style="background-color:#4eaaab; " type="number" id="precio_unitario" name="precio_unitario" step=".01"><br> <br>
+        <input style="background-color:#064445; color:white" type="submit" value="Crear Producto">
+    </form> <br>
 
-    <h2>Tabla de Productos</h2>
+    <h2 style="color:#064445;">Tabla de Productos</h2>
     <table border="1">
         <thead>
             <tr>
@@ -68,10 +69,7 @@
         </thead>
         <tbody>
             <?php
-            // Asegúrate de que tienes tu archivo db_config.php incluido aquí
-            // y luego incluye el código para recuperar tus productos
-            require_once "db_config.php";
-
+    
             try {
                 $conn = new PDO("mysql:host=$host;dbname=$db_name", $db_username, $db_password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
