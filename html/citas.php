@@ -39,6 +39,46 @@
             margin-top: 10px;
         }
     </style>
+    <style>
+    .formulario-producto {
+        width: 80%;
+        margin: auto;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    .formulario-producto label {
+        display: block;
+        margin: 10px 0px 5px 0px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .formulario-producto input[type="text"], .formulario-producto input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .formulario-producto input[type="submit"] {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario-producto input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
 </head>
 
 <body>
@@ -209,8 +249,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- Aquí inicia tu formulario -->
-                                <h1>Registro de Citas</h1>
-                                <form method="post" action="../php/crud_citas.php">
+                                <center> <h1>Registro de Citas</h1></center>
+                                <form class="formulario-producto" method="post" action="../php/crud_citas.php">
                                     <label for="id_mascota">ID de la Mascota:</label><br>
                                     <input type="number" id="id_mascota" name="id_mascota" required><br>
                                     <label for="fecha">Fecha:</label><br>
