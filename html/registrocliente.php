@@ -339,30 +339,36 @@ if ($_SESSION['rol'] != 'Administrador') {
                             <form action="../php/crud_clientes.php" method="post">
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <div class="input-group">
-                                    <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>" placeholder="Nombre"
-                                        class="input-field">
-                                    <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>" placeholder="Apellido"
-                                        class="input-field">
-                                    <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>" placeholder="Dirección"
-                                        class="input-field">
-                                    <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>" placeholder="Ciudad"
-                                        class="input-field">
-                                    <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>" placeholder="Teléfono"
-                                        class="input-field">
-                                    <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>"
-                                        placeholder="Correo" class="input-field">
-                                </div>
-                                <button type="submit" class="btn-update">Actualizar</button>
+                
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>">
+                
+                                <label for="apellido">Apellido:</label>
+                                <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>">
+                
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>">
+                
+                                <label for="ciudad">Ciudad:</label>
+                                <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>">
+                
+                                <label for="telefono">Teléfono:</label>
+                                <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>">
+                
+                                <label for="correo">Correo Electrónico:</label>
+                                <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>">
+                
+                                <input type="submit" value="Actualizar" style="background-color: blue;">
                             </form>
                             <form action="../php/crud_clientes.php" method="post">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <button type="submit" class="btn-delete">Eliminar</button>
+                                <input type="submit" value="Eliminar" style="background-color: red;">
                             </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
+
 
             </table>
 
