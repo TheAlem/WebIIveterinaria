@@ -302,67 +302,62 @@ if ($_SESSION['rol'] != 'Administrador') {
                     <th>Correo Electrónico</th>
                     <th>Acciones</th>
                 </tr>
-                <?php
-                require_once '../php/db_config.php'; // Reemplaza con la ruta a tu archivo de base de datos
-                
-                // Realizar consulta a la base de datos
-                $stmt = $conn->prepare("SELECT * FROM Clientes"); // Asegúrate de que 'Clientes' es el nombre correcto de tu tabla
-                $stmt->execute();
+            <?php
+            require_once '../php/db_config.php'; // Reemplaza con la ruta a tu archivo de base de datos
+            
+            // Realizar consulta a la base de datos
+            $stmt = $conn->prepare("SELECT * FROM Inventario"); // Asegúrate de que 'Inventario' es el nombre correcto de tu tabla
+            $stmt->execute();
 
-                // Fetch all rows as an associative array
-                $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                ?>
-                <?php foreach ($clientes as $cliente): ?>
-                    <tr>
-                        <td>
-                            <?php echo $cliente["ID_Cliente"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Nombre"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Apellido"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Dirección"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Ciudad"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Teléfono"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $cliente["Correo_electrónico"]; ?>
-                        </td>
-                        <td>
-                            <form action="../php/crud_clientes.php" method="post">
-                                <input type="hidden" name="action" value="update">
-                                <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <div class="input-group">
-                                    <input type="text" name="nombre" value="<?php echo $cliente["Nombre"]; ?>" placeholder="Nombre"
-                                        class="input-field">
-                                    <input type="text" name="apellido" value="<?php echo $cliente["Apellido"]; ?>" placeholder="Apellido"
-                                        class="input-field">
-                                    <input type="text" name="direccion" value="<?php echo $cliente["Dirección"]; ?>" placeholder="Dirección"
-                                        class="input-field">
-                                    <input type="text" name="ciudad" value="<?php echo $cliente["Ciudad"]; ?>" placeholder="Ciudad"
-                                        class="input-field">
-                                    <input type="text" name="telefono" value="<?php echo $cliente["Teléfono"]; ?>" placeholder="Teléfono"
-                                        class="input-field">
-                                    <input type="text" name="correo" value="<?php echo $cliente["Correo_electrónico"]; ?>"
-                                        placeholder="Correo" class="input-field">
-                                </div>
-                                <button type="submit" class="btn-update">Actualizar</button>
-                            </form>
-                            <form action="../php/crud_clientes.php" method="post">
-                                <input type="hidden" name="action" value="delete">
-                                <input type="hidden" name="id_cliente" value="<?php echo $cliente["ID_Cliente"]; ?>">
-                                <button type="submit" class="btn-delete">Eliminar</button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
+            // Fetch all rows as an associative array
+            $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            ?>
+            <?php foreach ($productos as $producto): ?>
+                <tr>
+                    <td>
+                        <?php echo $producto["ID_Producto"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $producto["Nombre"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $producto["Descripción"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $producto["Cantidad_Stock"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $producto["Proveedor"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $producto["Precio_Unitario"]; ?>
+                    </td>
+                    <td>
+                        <form action="../php/crud_productos.php" method="post">
+                            <input type="hidden" name="action" value="update">
+                            <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                            <div class="input-group">
+                                <input type="text" name="nombre" value="<?php echo $producto["Nombre"]; ?>" placeholder="Nombre"
+                                    class="input-field">
+                                <input type="text" name="descripcion" value="<?php echo $producto["Descripción"]; ?>"
+                                    placeholder="Descripción" class="input-field">
+                                <input type="text" name="cantidad_stock" value="<?php echo $producto["Cantidad_Stock"]; ?>"
+                                    placeholder="Cantidad en Stock" class="input-field">
+                                <input type="text" name="proveedor" value="<?php echo $producto["Proveedor"]; ?>"
+                                    placeholder="Proveedor" class="input-field">
+                                <input type="text" name="precio_unitario" value="<?php echo $producto["Precio_Unitario"]; ?>"
+                                    placeholder="Precio Unitario" class="input-field">
+                            </div>
+                            <button type="submit" class="btn-update">Actualizar</button>
+                        </form>
+                        <form action="../php/crud_productos.php" method="post">
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="id_producto" value="<?php echo $producto["ID_Producto"]; ?>">
+                            <button type="submit" class="btn-delete">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
 
             </table>
 
